@@ -56,22 +56,15 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/usr/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/usb_keyboard_102_en_us.kl \
     device/motorola/edison/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/motorola/edison/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf 
-    
-   #device/motorola/edison/prebuilt/bin/hijack:system/bin/hijack \
-   #device/motorola/edison/prebuilt/bin/hijack.log_dump:system/bin/hijack.log_dump \
-
-
 
 # Phone settings
 PRODUCT_COPY_FILES += \
     #device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml \
     vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
 
-    
 PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/lib/libwtnativetask.so:system/lib/libwtnativetask.so \
     device/motorola/edison/prebuilt/lib/camera.omap4.so:system/lib/hw/camera.omap4.so \
-    
 
 PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
@@ -82,8 +75,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl1271-nvs.bin:/system/etc/firmware/ti-connectivity/wl1271-nvs.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin:/system/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin \
-    
-    
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
@@ -107,10 +99,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so \
     device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
     device/motorola/edison/prebuilt/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
-    
-    
-    # copy all kernel modules under the "modules" directory to system/lib/modules
-PRODUCT_COPY_FILES += $(shell \
-    find device/motorola/edison/modules -name '*.ko' \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-    | tr '\n' ' ')
+
+# prebuilt ducati
+	device/motorola/edison/prebuilt/etc/firmware/ducati-m3.bin:system/etc/firmware/ducati-m3.bin \
