@@ -8,8 +8,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 
 # Device overlay
-#    DEVICE_PACKAGE_OVERLAYS += device/motorola/edison/overlay/aosp
-DEVICE_PACKAGE_OVERLAYS += device/motorola/edison/overlay
+    DEVICE_PACKAGE_OVERLAYS += device/motorola/edison/overlay
 
 # high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
@@ -136,7 +135,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # still need to set english for audio init
 PRODUCT_LOCALES += en_US
 
-
 # copy all kernel modules under the "modules" directory to system/lib/modules
 PRODUCT_COPY_FILES += $(shell \
     find device/motorola/edison/modules -name '*.ko' \
@@ -153,8 +151,6 @@ PRODUCT_COPY_FILES += $(shell test -d device/motorola/edison/modules && \
 	find device/motorola/edison/modules -name '*.ko' \
 	-printf '%p:system/lib/modules/%f ')
 
-
-    
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/motorola/edison/kernel
 else
@@ -169,21 +165,12 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/motorola/edison/omap4.mk)
 $(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 
-
 $(call inherit-product, device/motorola/edison/device_edison-blobs.mk)
 
 $(call inherit-product, device/motorola/edison/bootmenu/bootmenu.mk)
 
-#$(call inherit-product-if-exists, vendor/verizon/edison-leak-verizon-vendor.mk)
-#$(call inherit-product-if exists, device/ti/proprietary-open/wl12xx/wlan/wl12xx-wlan-fw-products.mk)
-
 $(call inherit-product-if-exists, device/motorola/omap4-common/common.mk)
 $(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor.mk)
-
-#$(call inherit-product-if-exists, vendor/google/gapps.mk)
-
-# stuff common to all Motorola phones -- disabled for Sandbox
-#$(call inherit-product, device/motorola/common/common_hijack.mk)
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 
