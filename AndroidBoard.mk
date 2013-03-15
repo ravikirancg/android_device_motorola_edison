@@ -29,3 +29,5 @@ include $(CLEAR_VARS)
 
 # include the non-open-source counterpart to this file
 -include vendor/motorola/edison/AndroidBoardVendor.mk
+
+

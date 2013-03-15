@@ -21,9 +21,9 @@ mount -o remount,rw rootfs /
 mount -o remount,rw $PART_SYSTEM /system
 ##################################################
 
-if [ -d $BM_ROOTDIR/init.d ]; then
-    chmod 755 $BM_ROOTDIR/init.d/*
-    run-parts $BM_ROOTDIR/init.d/
+if [ -d /system/etc/init.d ]; then
+    chmod 755 /system/etc/init.d/*
+    run-parts /system/etc/init.d/
 fi
 
 # normal cleanup here (need fix in recovery first)

@@ -52,6 +52,14 @@ umount -l /cache
 umount -l /data
 umount -l /preinstall
 umount -l /pds
+umount -l /sdcard
+umount -l /mnt/sdcard
+umount -l /sdcard-ext
+umount -l /mnt/sdcard-ext
+rm /sdcard
+rm /sdcard-ext
+rm -rf /mnt
+
 # as we use /sbin/bootmenu as busybox functions, we don't need system mount
 #umount -l /system
 

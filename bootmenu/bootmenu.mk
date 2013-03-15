@@ -1,6 +1,6 @@
 # Required tools and blobs for bootmenu
 
-#$(call inherit-product, device/motorola/common/Android.mk)
+#$(call inherit-product, device/motorola/omap4-common/Android.mk)
 
 bm_device = device/motorola/edison
 
@@ -21,31 +21,27 @@ PRODUCT_COPY_FILES += \
 
 # init.rc profiles
 PRODUCT_COPY_FILES += \
-	${bm_device}/bootmenu/profiles/cm/init.rc:system/bootmenu/2nd-init/init.rc \
-	${bm_device}/bootmenu/profiles/cm/init.mapphone_cdma.rc:system/bootmenu/2nd-init/init.mapphone_cdma.rc \
-	${bm_device}/bootmenu/profiles/cm/init.mapphone_umts.rc:system/bootmenu/2nd-init/init.mapphone_umts.rc \
-	${bm_device}/bootmenu/profiles/cm/init.trace.rc:system/bootmenu/2nd-init/init.trace.rc \
-	${bm_device}/bootmenu/profiles/cm/init.usb.rc:system/bootmenu/2nd-init/init.usb.rc \
-	${bm_device}/bootmenu/profiles/cm/ueventd.rc:system/bootmenu/2nd-init/ueventd.rc	\
-	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_cdma.rc:system/bootmenu/2nd-init/ueventd.mapphone_cdma.rc \
-	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_umts.rc:system/bootmenu/2nd-init/ueventd.mapphone_umts.rc \
-	${bm_device}/bootmenu/profiles/cm/init:system/bootmenu/2nd-init/init \
-	${bm_device}/bootmenu/profiles/cm/default.prop:system/bootmenu/2nd-init/default.prop \
-	${bm_device}/bootmenu/profiles/cm/usbcheck.sh:system/bootmenu/2nd-init/usbcheck.sh 
+	${bm_device}/bootmenu/profiles/aosp/init.rc:system/bootmenu/2nd-init/init.rc \
+	${bm_device}/bootmenu/profiles/aosp/init.mapphone_umts.rc:system/bootmenu/2nd-init/init.mapphone_umts.rc \
+	${bm_device}/bootmenu/profiles/aosp/init.trace.rc:system/bootmenu/2nd-init/init.trace.rc \
+	${bm_device}/bootmenu/profiles/aosp/init.usb.rc:system/bootmenu/2nd-init/init.usb.rc \
+	${bm_device}/bootmenu/profiles/aosp/ueventd.rc:system/bootmenu/2nd-init/ueventd.rc	\
+	${bm_device}/bootmenu/profiles/aosp/ueventd.mapphone_umts.rc:system/bootmenu/2nd-init/ueventd.mapphone_umts.rc \
+	${bm_device}/bootmenu/profiles/aosp/init:system/bootmenu/2nd-init/init \
+	${bm_device}/bootmenu/profiles/aosp/default.prop:system/bootmenu/2nd-init/default.prop \
+	${bm_device}/bootmenu/profiles/aosp/usbcheck.sh:system/bootmenu/2nd-init/usbcheck.sh 
 
 	
 # init.rc profiles to make ramdisk.img
 PRODUCT_COPY_FILES += \
-	${bm_device}/bootmenu/profiles/cm/init.rc:root/init.rc \
-	${bm_device}/bootmenu/profiles/cm/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
-	${bm_device}/bootmenu/profiles/cm/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
-	${bm_device}/bootmenu/profiles/cm/init.trace.rc:root/init.trace.rc \
-	${bm_device}/bootmenu/profiles/cm/init.usb.rc:root/init.usb.rc \
-	${bm_device}/bootmenu/profiles/cm/ueventd.rc:root/ueventd.rc	\
-	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_cdma.rc:root/ueventd.mapphone_cdma.rc \
-	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_umts.rc:root/ueventd.mapphone_umts.rc \
-	${bm_device}/bootmenu/profiles/cm/default.prop:root/default.prop \
-	${bm_device}/bootmenu/profiles/cm/usbcheck.sh:root/usbcheck.sh 
+	${bm_device}/bootmenu/profiles/aosp/init.rc:root/init.rc \
+	${bm_device}/bootmenu/profiles/aosp/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
+	${bm_device}/bootmenu/profiles/aosp/init.trace.rc:root/init.trace.rc \
+	${bm_device}/bootmenu/profiles/aosp/init.usb.rc:root/init.usb.rc \
+	${bm_device}/bootmenu/profiles/aosp/ueventd.rc:root/ueventd.rc	\
+	${bm_device}/bootmenu/profiles/aosp/ueventd.mapphone_umts.rc:root/ueventd.mapphone_umts.rc \
+	${bm_device}/bootmenu/profiles/aosp/default.prop:root/default.prop \
+	${bm_device}/bootmenu/profiles/aosp/usbcheck.sh:root/usbcheck.sh 
 	
 # scripts
 PRODUCT_COPY_FILES += \
@@ -72,7 +68,7 @@ PRODUCT_COPY_FILES += \
 	${bm_device}/bootmenu/binary/2nd-init:system/bootmenu/binary/2nd-init \
 	${bm_device}/bootmenu/binary/adbd.root:system/bootmenu/binary/adbd.root \
 	${bm_device}/bootmenu/binary/adbd:system/bootmenu/binary/adbd \
-	out/target/product/edison/utilities/busybox:system/bootmenu/binary/busybox \
+	${bm_device}/bootmenu/binary/busybox:system/bootmenu/binary/busybox \
 	${bm_device}/bootmenu/binary/lsof.static:system/bootmenu/binary/lsof \
 	${bm_device}/bootmenu/binary/bootmenu:system/bootmenu/binary/bootmenu \
 	${bm_device}/bootmenu/binary/recovery:system/bootmenu/binary/recovery
@@ -81,14 +77,14 @@ PRODUCT_COPY_FILES += \
 
 # images
 PRODUCT_COPY_FILES += \
-	external/bootmenu/images/indeterminate1.png:system/bootmenu/images/indeterminate1.png \
-	external/bootmenu/images/indeterminate2.png:system/bootmenu/images/indeterminate2.png \
-	external/bootmenu/images/indeterminate3.png:system/bootmenu/images/indeterminate3.png \
-	external/bootmenu/images/indeterminate4.png:system/bootmenu/images/indeterminate4.png \
-	external/bootmenu/images/indeterminate5.png:system/bootmenu/images/indeterminate5.png \
-	external/bootmenu/images/indeterminate6.png:system/bootmenu/images/indeterminate6.png \
-	external/bootmenu/images/progress_empty.png:system/bootmenu/images/progress_empty.png \
-	external/bootmenu/images/progress_fill.png:system/bootmenu/images/progress_fill.png \
+	${bm_device}/bootmenu/images/indeterminate1.png:system/bootmenu/images/indeterminate1.png \
+	${bm_device}/bootmenu/images/indeterminate2.png:system/bootmenu/images/indeterminate2.png \
+	${bm_device}/bootmenu/images/indeterminate3.png:system/bootmenu/images/indeterminate3.png \
+	${bm_device}/bootmenu/images/indeterminate4.png:system/bootmenu/images/indeterminate4.png \
+	${bm_device}/bootmenu/images/indeterminate5.png:system/bootmenu/images/indeterminate5.png \
+	${bm_device}/bootmenu/images/indeterminate6.png:system/bootmenu/images/indeterminate6.png \
+	${bm_device}/bootmenu/images/progress_empty.png:system/bootmenu/images/progress_empty.png \
+	${bm_device}/bootmenu/images/progress_fill.png:system/bootmenu/images/progress_fill.png \
 	${bm_device}/bootmenu/images/background.png:system/bootmenu/images/background.png 
 
 # recovery
@@ -122,10 +118,9 @@ PRODUCT_COPY_FILES += \
 	${bm_device}/bootmenu/recovery/sbin/sdparted:system/bootmenu/recovery/sbin/sdparted \
 	${bm_device}/bootmenu/recovery/sbin/mke2fs:system/bootmenu/recovery/sbin/mke2fs \
 	${bm_device}/bootmenu/recovery/sbin/mke2fs.bin:system/bootmenu/recovery/sbin/mke2fs.bin \
-	${bm_device}/bootmenu/recovery/sbin/tune2fs.bin:system/bootmenu/recovery/sbin/tune2fs \
+	${bm_device}/bootmenu/recovery/sbin/tune2fs.bin:system/bootmenu/recovery/sbin/tune2fs.bin \
 	${bm_device}/bootmenu/recovery/recovery.fstab:system/bootmenu/recovery/recovery.fstab 
 
 # recovery tools
 PRODUCT_COPY_FILES += \
-	out/target/product/edison/recovery/root/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs 
-
+	${bm_device}/bootmenu/recovery/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs 
