@@ -57,10 +57,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/motorola/edison/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf
 
-# Phone settings
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
-
 PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/lib/libwtnativetask.so:system/lib/libwtnativetask.so \
     device/motorola/edison/prebuilt/lib/camera.omap4.so:system/lib/hw/camera.omap4.so
