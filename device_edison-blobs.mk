@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:/system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:/system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml 
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
 
     # Prebuilts
 PRODUCT_COPY_FILES += \
@@ -55,16 +55,15 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/motorola/edison/prebuilt/usr/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/usb_keyboard_102_en_us.kl \
     device/motorola/edison/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/motorola/edison/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf 
+    device/motorola/edison/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf
 
 # Phone settings
 PRODUCT_COPY_FILES += \
-    #device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml \
-    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/lib/libwtnativetask.so:system/lib/libwtnativetask.so \
-    device/motorola/edison/prebuilt/lib/camera.omap4.so:system/lib/hw/camera.omap4.so \
+    device/motorola/edison/prebuilt/lib/camera.omap4.so:system/lib/hw/camera.omap4.so
 
 PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
@@ -74,7 +73,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl128x-fw-4-plt.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-plt.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-sr.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl1271-nvs.bin:/system/etc/firmware/ti-connectivity/wl1271-nvs.bin \
-    device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin:/system/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin \
+    device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin:/system/etc/firmware/ti-connectivity/wl1271-nvs_127x.bin
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -85,7 +84,7 @@ PRODUCT_COPY_FILES += \
 # prebuilt hwc
 PRODUCT_COPY_FILES += \
     #device/motorola/edison/hwc/hwcomposer.edison.so:system/vendor/lib/hw/hwcomposer.edison.so \
-    #device/motorola/edison/hwc/libedid.so:system/lib/libedid.so    
+    #device/motorola/edison/hwc/libedid.so:system/lib/libedid.so
 
 # Temporarily use prebuilt DOMX
 # Prebuilts /system/lib
@@ -98,7 +97,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
     device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so \
     device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
-    device/motorola/edison/prebuilt/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
+    device/motorola/edison/prebuilt/lib/libOMX_Core.so:/system/lib/libOMX_Core.so
 
 # prebuilt ducati
-	device/motorola/edison/prebuilt/etc/firmware/ducati-m3.bin:system/etc/firmware/ducati-m3.bin \
+PRODUCT_COPY_FILES += \
+    device/motorola/edison/prebuilt/etc/firmware/ducati-m3.bin:system/etc/firmware/ducati-m3.bin
