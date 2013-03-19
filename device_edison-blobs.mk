@@ -60,8 +60,8 @@ $(DEVICE_BLOB_FOLDER)/etc/media_codecs.xml:system/etc/media_codecs.xml \
 $(DEVICE_BLOB_FOLDER)/etc/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
-$(DEVICE_BLOB_FOLDER)/lib/libwtnativetask.so:system/lib/libwtnativetask.so \
-$(DEVICE_BLOB_FOLDER)/lib/camera.omap4.so:system/lib/hw/camera.omap4.so
+$(DEVICE_BLOB_FOLDER)/lib/libwtnativetask.so:system/lib/libwtnativetask.so
+#$(DEVICE_BLOB_FOLDER)/lib/camera.omap4.so:system/lib/hw/camera.omap4.so
 
 PRODUCT_COPY_FILES += \
 $(DEVICE_BLOB_FOLDER)/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
@@ -97,6 +97,5 @@ PRODUCT_COPY_FILES += \
 $(DEVICE_BLOB_FOLDER)/bin/libthermal-manager.cfg:system/bin/libthermal-manager.cfg \
 $(DEVICE_BLOB_FOLDER)/bin/thermaldaemon:system/bin/thermaldaemon \
 $(DEVICE_BLOB_FOLDER)/bin/vold:system/bin/vold \
-$(DEVICE_BLOB_FOLDER)/etc/firmware/ducati-m3.bin:system/etc/firmware/ducati-m3.bin \
 $(DEVICE_BLOB_FOLDER)/lib/libthermal_config.so:/system/lib/libthermal_config.so \
 $(DEVICE_BLOB_FOLDER)/lib/libthermal_manager.so:/system/lib/libthermal_manager.so

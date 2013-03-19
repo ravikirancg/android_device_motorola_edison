@@ -19,7 +19,8 @@ PRODUCT_PACKAGES := \
     charger_res_images
 
 PRODUCT_PACKAGES += \
-    camera.omap4 \
+    camera.edison \
+    lights.edison \
     libinvensense_mpl \
     parse_hdmi_edid \
     libedid 
@@ -171,6 +172,9 @@ $(call inherit-product, device/motorola/edison/bootmenu/bootmenu.mk)
 
 $(call inherit-product-if-exists, device/motorola/omap4-common/common.mk)
 $(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor-pvr.mk)
+$(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor-stock-camera.mk)
+$(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor-stock-ducati.mk)
 
 $(call inherit-product, build/target/product/full_base_telephony.mk)
 
