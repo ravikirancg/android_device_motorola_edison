@@ -9,7 +9,7 @@ persist.ril.modem.mode =1
 # This defines the max event window manager can
 # handle in 1 s. We may adjust this # for performance
 # reason later
-windowsmgr.max_events_per_sec=90
+windowsmgr.max_events_per_sec=55
 
 # USB modes allowed for UI and switching
 ro.ngp_available=1
@@ -23,7 +23,7 @@ wifi.ap.interface = wlan0
 # Time between scans in seconds. Keep it high to minimize battery drain.
 # This only affects the case in which there are remembered access points,
 # but none are in range.
-wifi.supplicant_scan_interval = 120
+wifi.supplicant_scan_interval = 45
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -145,6 +145,19 @@ ro.media.capture.torchIntensity=40
 ro.media.capture.flashIntensity=70
 ro.media.panorama.defres=3264x1840
 ro.media.panorama.frameres=1280x720
+ro.camcorder.mute=false
+ro.camera.dynamicFocus=true
+ro.camcorder.videoModes=false
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=false
+media.stagefright.enable-http=true
+media.stagefright.enable-record=false
+ro.media.camera.focal=3451.0,3451.0
+ro.media.camera.principal=1632.0,1224.0
+ro.media.camera.skew=0.0
+ro.media.camera.distortion=0.0,0.0,0.0,0.0,0.0
+ro.media.camera.calresolution=3264,2448
 ro.mot.setuptype=2
 dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
@@ -159,5 +172,14 @@ ro.mot.build.version.sdk_int=6
 ro.mot.hw.fingerprint.enable=1
 ro.setupwizard.enable_bypass=1
 persist.sys.usb.config=mass_storage,adb
+
+# Additions
 com.ti.omap_enhancement=true
 hwui.render_dirty_regions=false
+persist.sys.root_access=3
+ro.hwc.legacy_api=true
+ro.product.use_charge_counter=1
+persist.sys.gsm_signalstrength=true
+persist.sys.moto_oem_telephony=false
+persist.sys.moto_imsi_fix=false
+ro.config.not_world_phone=true

@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 # stuff specific to ti OMAP4 hardware
-$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
+#$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 
 $(call inherit-product, device/motorola/edison/device_edison-blobs.mk)
 

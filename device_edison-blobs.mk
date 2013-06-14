@@ -38,6 +38,7 @@ $(DEVICE_BLOB_FOLDER)/bin/strace:system/bin/strace \
 $(DEVICE_BLOB_FOLDER)/bin/finalize_release:system/bin/finalize_release \
 $(DEVICE_BLOB_FOLDER)/bin/uim-sysfs:system/bin/uim-sysfs \
 $(DEVICE_BLOB_FOLDER)/etc/gps.conf:system/etc/gps.conf \
+$(DEVICE_BLOB_FOLDER)/etc/apns-conf.xml:system/etc/apns-conf.xml \
 $(DEVICE_BLOB_FOLDER)/etc/media_profiles.xml:system/etc/media_profiles.xml \
 $(DEVICE_BLOB_FOLDER)/etc/vold.fstab:system/etc/vold.fstab \
 $(DEVICE_BLOB_FOLDER)/usr/idc/evfwd.idc:system/usr/idc/evfwd.idc \

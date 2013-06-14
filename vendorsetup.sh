@@ -21,5 +21,4 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo full_edison-userdebug
-add_lunch_combo cm_edison-userdebug
-add_lunch_combo pa_edison-userdebug
+add_lunch_combo pac_edison-userdebug

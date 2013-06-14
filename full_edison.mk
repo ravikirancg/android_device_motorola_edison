@@ -40,4 +40,5 @@ $(call inherit-product, device/motorola/edison/device.mk)
 PRODUCT_NAME := full_edison
 PRODUCT_DEVICE := edison
 PRODUCT_BRAND := MOTO
+PRODUCT_MANUFACTURER := MOTO
 PRODUCT_MODEL := MB865
